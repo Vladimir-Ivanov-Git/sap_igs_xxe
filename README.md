@@ -218,6 +218,9 @@ host         service  type         name         content     info         path
 ## Second HTTP request to get remote /etc/passwd file in Burp
 ![Second HTTP request to get remote /etc/passwd file in Burp](https://github.com/Vladimir-Ivanov-Git/sap_igs_xxe/blob/main/Proofs/sap_igs_xxe_run_burp_2.png)
 
+## Demo video
+[![Demo video](https://github.com/Vladimir-Ivanov-Git/sap_igs_xxe/blob/main/Proofs/video_preview.gif)](https://youtu.be/rsCJFskb_P0)
+
 [1]: https://download.ernw-insight.de/troopers/tr18/slides/TR18_SAP_IGS-The-vulnerable-forgotten-component.pdf
 [2]: https://help.sap.com/viewer/3348e831f4024f2db0251e9daa08b783/7.5.16/en-US/4e193dbeb5c617e2e10000000a42189b.html
 [3]: https://help.sap.com/viewer/3348e831f4024f2db0251e9daa08b783/7.5.16/en-US/4e1939c9b5c617e2e10000000a42189b.html
