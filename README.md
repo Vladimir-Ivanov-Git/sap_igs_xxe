@@ -1,5 +1,11 @@
 # SAP IGS XXE attack CVE-2018-2392 and CVE-2018-2393
 
+## This module in Metasploit Framework
+
+[Documentation][1]
+
+[Module][2]
+
 ## Vulnerable Application
 This module exploits CVE-2018-2392 and CVE-2018-2393, two XXE vulnerabilities within the XMLCHART page
 of SAP Internet Graphics Servers (IGS) running versions 7.20, 7.20EXT, 7.45, 7.49, or 7.53. These
@@ -18,9 +24,9 @@ where it provides a way for data from another SAP system or data source to be ut
 dynamic graphical or non-graphical output.
 
 ### Installation Steps
-Steps to install and update the SAP IGS server can be found online on [this page][2].
-Additional information on configuring the IGS server can be found [here][3].
-Finally information on administering the IGS server can be found [here][4].
+Steps to install and update the SAP IGS server can be found online on [this page][3].
+Additional information on configuring the IGS server can be found [here][4].
+Finally information on administering the IGS server can be found [here][5].
 
 Once set up and configured, the instances will be vulnerable on the default HTTP port 40080.
 
@@ -164,10 +170,11 @@ host          service  type              name         content     info          
 
 ```
 
-[1]: https://download.ernw-insight.de/troopers/tr18/slides/TR18_SAP_IGS-The-vulnerable-forgotten-component.pdf
-[2]: https://help.sap.com/viewer/3348e831f4024f2db0251e9daa08b783/7.5.16/en-US/4e193dbeb5c617e2e10000000a42189b.html
-[3]: https://help.sap.com/viewer/3348e831f4024f2db0251e9daa08b783/7.5.16/en-US/4e1939c9b5c617e2e10000000a42189b.html
-[4]: https://help.sap.com/viewer/3348e831f4024f2db0251e9daa08b783/7.5.16/en-US/4e193988b5c617e2e10000000a42189b.html
+[1]: https://github.com/rapid7/metasploit-framework/blob/master/documentation/modules/auxiliary/admin/sap/sap_igs_xmlchart_xxe.md
+[2]: https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/admin/sap/sap_igs_xmlchart_xxe.rb
+[3]: https://help.sap.com/viewer/3348e831f4024f2db0251e9daa08b783/7.5.16/en-US/4e193dbeb5c617e2e10000000a42189b.html
+[4]: https://help.sap.com/viewer/3348e831f4024f2db0251e9daa08b783/7.5.16/en-US/4e1939c9b5c617e2e10000000a42189b.html
+[5]: https://help.sap.com/viewer/3348e831f4024f2db0251e9daa08b783/7.5.16/en-US/4e193988b5c617e2e10000000a42189b.html
 
 ## HTTP check request in Burp
 ![HTTP check request in Burp](https://github.com/Vladimir-Ivanov-Git/sap_igs_xxe/blob/main/Proofs/sap_igs_xxe_check_burp.png)
